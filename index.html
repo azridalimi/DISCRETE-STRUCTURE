@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Discrete Structures · Memorise</title>
+  <meta name="description" content="Study app for Discrete Structures: read each note, then answer questions about it.">
+  <meta name="theme-color" content="#121212">
+  <!-- Fonts load when online; the CSS falls back to system fonts offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Noto+Sans+Math&family=Oi&family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='18' fill='%23F65F4E'/%3E%3Cellipse cx='32' cy='32' rx='30' ry='9' fill='none' stroke='%23DBCC47' stroke-width='4' transform='rotate(-20 32 32)'/%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Decorative space background (CSS/SVG only) -->
+  <div class="space" aria-hidden="true">
+    <div class="stars s1"></div><div class="stars s2"></div><div class="stars s3"></div>
+    <svg class="planet" viewBox="0 0 200 200">
+      <defs>
+        <radialGradient id="pg" cx="35%" cy="35%" r="70%"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#b8382b"/></radialGradient>
+      </defs>
+      <ellipse cx="100" cy="100" rx="95" ry="26" fill="none" stroke="#DBCC47" stroke-width="5" opacity=".7" transform="rotate(-18 100 100)"/>
+      <circle cx="100" cy="100" r="52" fill="url(#pg)"/>
+      <path d="M52 92 Q100 80 148 96" stroke="#F9E8F1" stroke-width="4" fill="none" opacity=".35"/>
+      <path d="M50 112 Q100 102 150 114" stroke="#121212" stroke-width="5" fill="none" opacity=".18"/>
+      <path d="M8 118 Q100 150 192 82" fill="none" stroke="#DBCC47" stroke-width="5" opacity=".9" transform="rotate(0)"/>
+    </svg>
+    <svg class="moon" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="#F9E8F1"/>
+      <circle cx="36" cy="40" r="8" fill="#d9c6d0"/><circle cx="60" cy="62" r="11" fill="#d9c6d0"/><circle cx="64" cy="32" r="5" fill="#d9c6d0"/>
+    </svg>
+    <div class="orbit o1"></div><div class="orbit o2"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <a href="#/" class="brand" aria-label="Home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="10" fill="#F65F4E"/><ellipse cx="20" cy="20" rx="18" ry="6" fill="none" stroke="#DBCC47" stroke-width="2.5" transform="rotate(-20 20 20)"/></svg>
+      <span>DS·MEMORISE</span>
+    </a>
+    <nav class="nav">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/trap" data-nav="trap">Trap quiz</a>
+      <a href="#/manage" data-nav="manage">Manage notes</a>
+      <button type="button" class="sound-toggle" id="soundToggle" aria-pressed="true" title="Sound on/off">♪ <span>ON</span></button>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="color:#fff;padding:2rem">This app needs JavaScript.</p></noscript>
+  <script src="js/checker.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
